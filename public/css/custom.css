@@ -1,0 +1,87 @@
+/* Efecto hover para las imágenes */
+.card-img-top {
+    transition: transform 0.3s ease; /* Transición suave */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Aumentar el tamaño en un 10% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agregar sombra para resaltar */
+}
+/* Estilo para las tarjetas de pizza */
+.card {
+    border: none; /* Eliminar el borde predeterminado */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Levantar la tarjeta al pasar el cursor */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+}
+
+/* Estilo para las imágenes de las pizzas */
+.card-img-top {
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Asegurar que la imagen se ajuste al contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    width: 100%; /* Ancho completo */
+    transition: transform 0.3s ease; /* Efecto hover */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Agrandar la imagen al pasar el cursor */
+}
+
+/* Estilo para el título de la pizza */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para el precio */
+.card-text.font-weight-bold {
+    font-size: 1.1rem;
+    color: #ff6347; /* Color naranja para destacar */
+}
+/* Hero Section */
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    padding: 0; /* Eliminar relleno */
+}
+
+.hero-section .container {
+    z-index: 1; /* Mantener el contenido sobre el fondo */
+    position: relative;
+}
+
+/* Botón de "Ver Menú" */
+.btn-outline-light {
+    border-color: white;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #ff6347; /* Color naranja al pasar el cursor */
+}
+
+/* Sección "Acerca de nosotros" */
+.about-section img {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Footer */
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6347 !important; /* Cambiar color al pasar el cursor */
+}

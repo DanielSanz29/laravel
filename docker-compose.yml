@@ -1,0 +1,25 @@
+services:
+    db:
+        image: mysql
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=pizzeria
+            - MYSQL_USER=alumno
+            - MYSQL_PASSWORD=alumno
+        ports:
+            - 33306:3306
+        volumes:
+            - ./docker/mysql/data:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        environment:
+            - PMA_HOST=db
+            - PMA_PORT=3306
+            - MYSQL_ROOT_PASSWORD=root
+            - PMA_ARBITRARY=1
+        ports:
+            - 8080:80
+        depends_on:
+            - db
