@@ -6,7 +6,7 @@
         <div class="container text-center">
             <h1 class="display-3 fw-bold">La Porción de Utebo</h1>
             <p class="lead">La mejor pizza artesanal de la ciudad. Ven y disfruta de nuestra deliciosa comida.</p>
-            <a href="{{ route('pizzas.index') }}" class="btn btn-lg btn-outline-light mt-4">Ver Menú</a>
+            <a href="{{ route('pizzas') }}" class="btn btn-lg btn-outline-light mt-4">Ver Menú</a>
         </div>
     </section>
 

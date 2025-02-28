@@ -1,13 +1,12 @@
 <?php
 use App\Http\Controllers\PizzaController;
 
+use App\Models\Pizza;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal para la página home
 Route::resource('pizzas', PizzaController::class);
-// Rutas para las pizzas
 
-Route::resource('pizzas', PizzaController::class);
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -15,19 +14,15 @@ Route::get('/', function () {
 Route::get('/menu/{pizzeria}', function ($pizzeria) {
     return view('menu', ['pizzeria' => $pizzeria]);
 })->name('menu');
-Route::resource('pizzas', PizzaController::class);
-
-
-Route::get('/', function () {
-    return view('index');
-});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
-Route::get('/', function () {
-    return redirect()->route('pizzas.index');
-});
+
+Route::get('/pizzas', function() {
+    $pizzas = Pizza::all();
+    return view('pizzas.index', compact('pizzas'));
+})->middleware(["auth", "verified"])->name("pizzas");
 
 
 Route::view('profile', 'profile')
