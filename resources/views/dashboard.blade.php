@@ -1,17 +1,42 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+@section('content')
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Si quieres saber mas de nosotros echale un vistazo a esto</h1>
+
+        <!-- Otras secciones del dashboard -->
+
+        <!-- Sección de redes sociales -->
+        <section class="social-section bg-light py-5">
+            <div class="container text-center">
+                <h2 class="mb-4">Síguenos en nuestras redes sociales</h2>
+                <div class="social-icons d-flex justify-content-center">
+                    <!-- Enlace a Facebook -->
+                    <a href="https://www.facebook.com/tupaginadefacebook" class="text-dark me-3" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+
+                    <!-- Enlace a Instagram -->
+                    <a href="https://www.instagram.com/tupaginaeninstagram" class="text-dark me-3" target="_blank">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+
+                    <!-- Enlace a Twitter -->
+                    <a href="https://www.twitter.com/tupaginaentwitter" class="text-dark me-3" target="_blank">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+
+                    <!-- Enlace a TikTok (opcional) -->
+                    <a href="https://www.tiktok.com/@tupaginaentiktok" class="text-dark me-3" target="_blank">
+                        <i class="fab fa-tiktok fa-2x"></i>
+                    </a>
+
+                    <!-- Enlace a YouTube (opcional) -->
+                    <a href="https://www.youtube.com/c/tupaginaenyoutube" class="text-dark" target="_blank">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</x-app-layout>
+@endsection

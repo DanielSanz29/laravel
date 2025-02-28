@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{ route('pizzas') }}">Menú</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="{{ route('dashboard') }}">Contacto</a>
                 </li>
             </ul>
         </div>
