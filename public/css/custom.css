@@ -48,14 +48,38 @@
 /* Hero Section */
 .hero-section {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    padding: 0; /* Eliminar relleno */
+    padding: 0;
 }
 
 .hero-section .container {
-    z-index: 1; /* Mantener el contenido sobre el fondo */
+    z-index: 1;
     position: relative;
 }
 
+/* Texto en el hero section */
+.hero-section h1 {
+    font-size: 3rem; /* Tamaño de fuente adaptable */
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Tamaño de fuente adaptable */
+}
+
+/* Botón en el hero section */
+.hero-section .btn-outline-light {
+    border-color: white;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: white;
+    color: #ff6347; /* Color naranja al pasar el cursor */
+}
 /* Botón de "Ver Menú" */
 .btn-outline-light {
     border-color: white;
@@ -71,17 +95,40 @@
     color: #ff6347; /* Color naranja al pasar el cursor */
 }
 
-/* Sección "Acerca de nosotros" */
-.about-section img {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
-    border-radius: 10px; /* Bordes redondeados */
+/* Tarjetas de promociones */
+.promotions-section .card {
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Footer */
-.social-icons a {
-    transition: color 0.3s ease;
+.promotions-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.social-icons a:hover {
-    color: #ff6347 !important; /* Cambiar color al pasar el cursor */
+/* Sección de testimonios */
+.testimonials-section blockquote {
+    border-left: 5px solid #ff6347; /* Línea lateral naranja */
+    padding-left: 20px;
+}
+
+/* Sección Llamado a la acción */
+.cta-section {
+    background-color: #333;
+    color: white;
+}
+
+.cta-section .btn-warning {
+    background-color: #ff6347;
+    border-color: #ff6347;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .btn-warning:hover {
+    background-color: white;
+    color: #ff6347;
+    border-color: #ff6347;
 }

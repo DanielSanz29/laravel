@@ -5,6 +5,22 @@
         <h1 class="text-center mb-4">Si quieres saber mas de nosotros echale un vistazo a esto</h1>
 
         <!-- Otras secciones del dashboard -->
+        <!-- Otras secciones del dashboard -->
+        <section class="about-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="https://via.placeholder.com/500x400?text=Nuestra+Historia" class="img-fluid rounded" alt="Nosotros">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h2 class="mb-4">Sobre Nosotros</h2>
+                        <p>En La Porción de Utebo, nos dedicamos a preparar pizzas artesanales con ingredientes frescos y de calidad. Nuestro equipo de chefs trabaja con pasión para ofrecerte una experiencia culinaria única.</p>
+                        <p>Ven a visitarnos y descubre por qué somos la elección favorita de muchos en Utebo. ¡Te esperamos!</p>
+                        <a href="#promociones" class="btn btn-primary">Descubre nuestras promociones</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Sección de redes sociales -->
         <section class="social-section bg-light py-5">
