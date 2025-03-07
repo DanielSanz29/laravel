@@ -57,6 +57,10 @@
                         </div>
                     </li>
                 @endguest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('pedidos.create') }}">Hacer Pedido</a>
+                </li>
+
 
                 <!-- Cambiador de idiomas -->
                 <li class="nav-item dropdown">

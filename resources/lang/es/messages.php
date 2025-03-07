@@ -1,6 +1,5 @@
 
 <?php
-
 return [
     'menu' => 'Menú',
     'contact' => 'Contacto',

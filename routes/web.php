@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\PizzaController;
-
+use App\Http\Controllers\PedidoController;
+use App\Models\Pedido;
 use App\Models\Pizza;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,17 @@ Route::get('/pizzas', function() {
     return view('pizzas.index', compact('pizzas'));
 })->middleware(["auth", "verified"])->name("pizzas");
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/pedidos/create', [PedidoController::class, 'create'])->name('pedidos.create'); // Formulario
+    Route::post('/pedidos', [PedidoController::class, 'store'])->name('pedidos.store'); // Guardar pedido
+
+});
+Route::get('/pedidos/resumen/{pedido}', [PedidoController::class, 'resumen'])->name('pedidos.resumen');
+
+Route::get('pedidos/confirmar/{id}', [PedidoController::class, 'confirmar'])->name('pedidos.confirmar');
+Route::get('pedidos/exito/{id}', [PedidoController::class, 'exito'])->name('pedidos.exito');
+
+
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
@@ -46,5 +58,13 @@ Route::get('/lang/{locale}', function ($locale) {
 Route::post('/logout', [\App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'destroy'])
     ->name('logout')
     ->middleware('auth');
+Route::post('/favoritos/{pedido}', function ($pedidoId) {
+    $pedido = Pedido::find($pedidoId);
+    if ($pedido) {
+        Session::put("favorito_$pedidoId", true);
+        return response()->json(['message' => 'Pedido añadido a favoritos']);
+    }
+    return response()->json(['message' => 'Pedido no encontrado'], 404);
+});
 
 require __DIR__.'/auth.php';

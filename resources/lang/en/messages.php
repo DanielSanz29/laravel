@@ -7,4 +7,3 @@ return [
     'register' => 'Register',
     'logout' => 'Logout',
 ];
-
